@@ -2,24 +2,73 @@
     margin: 0;
     padding: 0;
 }
+/* Intro */
+.splash{
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 900;
+    line-height: 90vh;
+    transition-duration: 1s;
+    transition-property: opacity;
+}
+@keyframes intro {
+    to{
+        opacity: 1;
+    }
+}
+.fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: -10;
+    line-height: 90vh;
+    transition-duration: 1s;
+    transition-property: opacity;
+}
+.intro{
+    opacity: 0;
+    animation: intro 1s ease-in forwards;
+}
 /* Header */
 header {
     background-color: bisque;
     box-shadow: 5px 5px 5px black;
 }
-
-header ul {
+header img{
+    float: left;
+}
+/* Links Dropdowns */
+nav{
     display: flex;
     justify-content: space-evenly;
 }
-/* Links Dropdowns */
 .content-container{
     position: relative;
+    list-style-type: none;
 }
 .content{
     display: none;
     position: absolute;
-    background-color: aqua;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+.content a{
+    color: white;
+    display: block;
+}
+.content a:hover{
+    color: gold;
 }
 .content-container:hover .content{
     display: block;
@@ -82,7 +131,9 @@ footer fieldset legend{
 
 footer fieldset a {
     background-color: black;
-    transition: ease-in-out 0.25s;
+    transition-property: background-color;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
     margin: 10px;
     padding: 10px;
     border-radius: 5px;

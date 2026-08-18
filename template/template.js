@@ -5,3 +5,8 @@ document.addEventListener('DOMContentLoaded', (e)=>{
         splash.classList = "fade";
     }, 2000)
 });
+function showSideBar() {
+    const sideBar = document.querySelector(".sidebar");
+    sideBar.style.display = "flex";
+    
+}

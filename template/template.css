@@ -109,12 +109,10 @@ header img {
 }
 
 /* Nav Bar and links */
-nav#menu {
+header nav#menu {
     display: none;
 }
-nav#bar {
-    display: flex;
-    justify-content: space-evenly;
+header nav#bar {
     background-color: rgba(255, 255, 255, 0.25);
     padding: 10px;
     /*margin: 10px;*/
@@ -129,6 +127,11 @@ nav#bar {
     border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0px 10px 10px black;
     color: white;
+}
+header nav#bar ul{
+    display: flex;
+    justify-content: space-evenly;
+    
 }
 
 /*nav#bar::after {
@@ -354,11 +357,11 @@ a#githubLink:hover img {
     }
 
     /* Nav Bar and links */
-    nav#bar {
+    header nav#bar {
         display: none;
     }
 
-    nav#menu {
+    header nav#menu {
         display: block;
         background-color: rgba(255, 255, 255, 0.25);
         padding: 10px;

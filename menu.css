@@ -30,6 +30,9 @@ header {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
+    /*will-change: transform, opacity;
+    transform: translateZ(0);*/
+    /* Force l'utilisation du GPU */
 }
 
 #celestial_section section {
@@ -82,4 +85,27 @@ p {
     margin-left: auto;
     margin-right: auto;
     border: double 5px goldenrod;
+}
+
+@media screen and (max-width: 1080px) {
+    #celestial_section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: max-content;
+    }
+
+    #sc1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #sc2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #sc3 {
+        grid-column: 1;
+        grid-row: 3;
+    }
 }

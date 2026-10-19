@@ -8,22 +8,59 @@
     <link rel="icon" href="template/images/logo/logo.png">
     <link rel="shortcut icon" href="template/images/logo/logo.png">
     <link rel="stylesheet" href="template/template.css">
+    <link rel="stylesheet" href="menu.css">
     <script type="text/javascript" src="template/template.js" defer></script>
+    <script type="text/javascript" src="menu.js" defer></script>
 </head>
 
 <body>
     <div class="splash">
         <section class="animation_items_container">
-            <img src="template/images/logo/logo.png" alt="" class="intro" id="image">
+            <img src="template/images/logo/logo.png" alt="Logo" class="intro" id="image">
             <h1 class="intro" id="title">FramelinK</h1>
         </section>
     </div>
     <header>
         <div class="logocontainer">
-            <img src="template/images/logo/logo.png" alt="" width="50px">
+            <img src="template/images/logo/logo.png" alt="Logo" width="50px">
             <h1><i>FramelinK</i></h1>
         </div>
         <nav id="bar">
+            <ul>
+                <li class="content-container"><a>Home</a>
+                    <div class="content">
+                        <a href="#sc1" onclick="shiningHeader('#sc1')">Welcome to FramelinK !</a>
+                        <a href="#sc2" onclick="shiningHeader('#sc2')">Who are we</a>
+                        <a href="#sc3" onclick="shiningHeader('#sc3')">What do we do</a>
+                    </div>
+                </li>
+                <li class="content-container">Our projects
+                    <div class="content">
+                        <a href="#">Roblox</a>
+                        <a href="#">Scratch / Turbowarp</a>
+                    </div>
+                </li>
+                <li class="content-container">Others
+                    <div class="content">
+                        <a href="#">1</a>
+                        <a href="#">1</a>
+                        <a href="#">1</a>
+                    </div>
+                </li>
+                <li class="content-container">Support us !
+                    <div class="content">
+                        <a href="#">1</a>
+                        <a href="#">1</a>
+                        <a href="#">1</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <nav id="menu" onclick="showSideBar();">
+            &#9776;
+        </nav>
+        <div class="sidebar">
+            <p onclick="hideSideBar();">X</p>
             <ul>
                 <li class="content-container">About us
                     <div class="content">
@@ -53,45 +90,51 @@
                     </div>
                 </li>
             </ul>
-        </nav>
-        <nav id="menu" onclick="showSideBar();">
-            &#9776;
-        </nav>
-        <div class="sidebar">
-                <p onclick="hideSideBar();">X</p>
-                <ul>
-                    <li class="content-container">About us
-                        <div class="content">
-                            <a href="#">Who are we</a>
-                            <a href="#">What do we do</a>
-                            <a href="#">For which reason ?</a>
-                        </div>
-                    </li>
-                    <li class="content-container">Our projects
-                        <div class="content">
-                            <a href="#">Roblox</a>
-                            <a href="#">Scratch / Turbowarp</a>
-                        </div>
-                    </li>
-                    <li class="content-container">Others
-                        <div class="content">
-                            <a href="#">1</a>
-                            <a href="#">1</a>
-                            <a href="#">1</a>
-                        </div>
-                    </li>
-                    <li class="content-container">Support us !
-                        <div class="content">
-                            <a href="#">1</a>
-                            <a href="#">1</a>
-                            <a href="#">1</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+        </div>
     </header>
     <main>
-        <article>
+        <article id="celestial_section">
+            <section id="sc1">
+                <h2>Welcome to FramelinK !</h2>
+                <p>
+                    FramelinK is a project made by a group of teens that share the same passions for gaming.
+                </p>
+
+            </section>
+            <section id="sc2">
+                <h2>Who are we ?</h2>
+                <p>In this group we have, for now : </p>
+                <ul>
+                    <li>Two programmers : one who is also a community manager and the other who focuses on things such
+                        as game development. By combining their power of creativity, No problems shall appear for the
+                        devlopment of their projects</li>
+                    <li>Three Designers : They give life to our universe, by their brilliant minds, they design from the
+                        global stories to the tiny little details on a character that appears for one milli second.</li>
+                    <li>One beta tester : He's the one, the only ! He sacrifies his time and sanity searching for any
+                        piece of incorrection from the projects</li>
+                </ul>
+                <p>The group could evolve in the future, maybe more people with the same or different functions</p>
+            </section>
+            <section id="sc3">
+                <h2>What do we do ?</h2>
+                <p>
+                    We have alot of different projects that mostly comes from our designers. But we also need to focus
+                    on basic, main tasks such as publishing online
+                </p>
+                <p>
+                    For the other projects, we have :
+                </p>
+                <ul>
+                    <li>This website ;)</li>
+                    <li>"The Pawnless King", a game we are currently working on</li>
+                    <li>"Project ZeroDay", currently on pause, this was our first project made by the team, there is
+                        just some dev arts for now</li>
+                    <li>"Project Playthrough"</li>
+                </ul>
+                <p>Find more about our projects <a href="#">here</a></p>
+            </section>
+        </article>
+        <article id="tower_section">
             <h2>This is a header !</h2>
             <section id="s1">
                 <h3>Mini header !</h3>
@@ -120,7 +163,8 @@
         <fieldset id="links">
             <legend><i>Links</i></legend>
             <a href="https://www.youtube.com/@FrameLink2026" id="youtubeLink" target="_blank" rel="noopener noreferrer">
-                <img src="template/images/logo/links/toppng.com-youtube-logo-png-white-1998x1530.png" alt="Youtube" title="Youtube !">
+                <img src="template/images/logo/links/toppng.com-youtube-logo-png-white-1998x1530.png" alt="Youtube"
+                    title="Youtube !">
             </a>
             <a href="https://discord.gg/BZNUKTEsCd" id="discordLink" target="_blank" rel="noopener noreferrer">
                 <img src="template/images/logo/links/discord-white-icon.webp" alt="Discord" title="Discord !">
@@ -128,7 +172,8 @@
             <a href="https://github.com/thelinkteam2026" id="githubLink" target="_blank" rel="noopener noreferrer">
                 <img src="template/images/logo/links/github.png" alt="Github" title="Github !">
             </a>
-            <a href="https://www.instagram.com/thelinkteam2026/" id="instagramLink" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/thelinkteam2026/" id="instagramLink" target="_blank"
+                rel="noopener noreferrer">
                 <img src="template/images/logo/links/instagram.png" alt="Instagram" title="Instagram !">
             </a>
             <a href="https://www.twitch.tv/framelink2026" id="twitchLink" target="_blank" rel="noopener noreferrer">

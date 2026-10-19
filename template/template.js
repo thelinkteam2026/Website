@@ -5,6 +5,9 @@ console.log(sideBar);
 document.addEventListener('DOMContentLoaded', (e) => {
     setTimeout(() => {
         splash.classList = "fade";
+        splash.addEventListener('transitionend', () => {
+            splash.remove();
+        });
     }, 2000)
 });
 function showSideBar() {
@@ -12,6 +15,6 @@ function showSideBar() {
 }
 function hideSideBar() {
     event.stopPropagation(); // Empêche le clic de remonter jusqu'à nav#menu
-    console.log("Clic détecté !");
+    //console.log("Clic détecté !");
     sideBar.style.display = "none";
 }
